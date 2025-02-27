@@ -1,0 +1,5 @@
+*.md
+*.env
+*_modules
+node_modules
+
