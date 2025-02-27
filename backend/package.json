@@ -8,5 +8,17 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "glob": "^9.0.0",
+    "helmet": "^7.2.0",
+    "install": "^0.13.0",
+    "lru-cache": "^11.0.2",
+    "npm": "^11.1.0"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "pg-mock": "^1.0.1",
+    "supertest": "^7.0.0"
+  }
 }
