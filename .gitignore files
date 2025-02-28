@@ -1,3 +1,8 @@
-*node_modules
-.env
+node_modules/
+dist/
+*.env
+.git/
 *_modules
+*.config
+.vscode/
+.idea/
