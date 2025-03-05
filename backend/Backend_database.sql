@@ -28,7 +28,7 @@ SET default_table_access_method = heap;
 -- Name: transaction; Type: TABLE; Schema: public; Owner: postgres
 --
 
-CREATE TABLE public.transaction (
+CREATE TABLE IF NOT EXISTS public.transaction (
     id integer NOT NULL,
     user_id integer,
     amount numeric(10,2) NOT NULL,
@@ -72,7 +72,7 @@ ALTER SEQUENCE public.transaction_id_seq OWNED BY public.transaction.id;
 -- Name: users; Type: TABLE; Schema: public; Owner: postgres
 --
 
-CREATE TABLE public.users (
+CREATE TABLE IF NOT EXISTS public.users (
     id integer NOT NULL,
     first_name character varying(100) NOT NULL,
     last_name character varying(100) NOT NULL,
