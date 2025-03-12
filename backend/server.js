@@ -1,0 +1,14 @@
+const express = require('express');
+const {Pool} = require('pg');
+const jwt = require('jsonwebtoken');
+const bcrypt = require('bcrypt');
+const {body, sanitizeBody, validationResult} = require('express-validator')
+const helmet = require('helmet');
+const {pipeline} = require('@huggingface/inference');
+const rateLimit = require('express-rate-limit');
+const winston = require('winston');
+const cors = require('cors');
+const {v4: uuidv4} = require('uuid')
+const {cleanEnv, str, num} = require('envalid');
+const swaggerUi = require('swagger-ui-express');
+const swaggerDocument = require('./swagger.json');
