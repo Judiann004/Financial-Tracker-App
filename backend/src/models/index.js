@@ -1,7 +1,7 @@
-const User = require('../User');
-const Transaction = require('../Transaction');
+const User = require('./User'); //fixed path to User model
+const Transaction = require('./Transaction'); //fixed path to Transaction model
 
 User.hasMany(Transaction, {foreignKey: 'userId'});
-Transaction.belongTo(User, {foreignKey: 'userId'});
+Transaction.belongsTo(User, {foreignKey: 'userId'}); //changed belongto to belongsTo
 
 module.exports = {User, Transaction};
