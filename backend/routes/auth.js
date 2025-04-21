@@ -2,8 +2,9 @@
 const express = require('express');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
-const { User } = require('../models');
-const {validateRegistration, handleValidationErrors} = require('../chains/validation');
+const db = require('../src/models'); //fixed path to models
+const {User} = db; //linked user to db 
+const {validateRegistration, validateLogin, handleValidationErrors} = require('../chains/validator'); //fixed - validator not validation
 const {Op} = require('sequelize')
 const router = express.Router();
 
